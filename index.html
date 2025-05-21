@@ -4,89 +4,107 @@
   <meta charset="UTF-8" />
   <title>Neurotag - Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      overflow: hidden;
-      background: #000;
-    }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    background: #000;
+  }
 
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #00d0ff90;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .login-container img {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .login-container h1 {
+    color: #00d0ff;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #1a1a1a;
+    border: 1px solid #00d0ff;
+    border-radius: 8px;
+    color: #00d0ff;
+    font-size: 16px;
+  }
+
+  .login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #00d0ff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+
+  .login-container button:hover {
+    background: #00aacc;
+  }
+
+  .alt-logins button {
+    width: 100%;
+    background: transparent;
+    color: #00d0ff;
+    border: 1px solid #00d0ff;
+    margin-top: 10px;
+  }
+
+  .alt-logins button:hover {
+    background: #00d0ff;
+    color: #000;
+  }
+
+  @media (max-width: 500px) {
     .login-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 360px;
-      background: rgba(10, 10, 10, 0.9);
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px #00d0ff90;
-      text-align: center;
-      z-index: 1;
+      padding: 30px 15px;
     }
 
     .login-container img {
-      width: 90px;
-      margin-bottom: 15px;
+      width: 100px;
     }
 
     .login-container h1 {
-      color: #00d0ff;
-      margin-bottom: 30px;
+      font-size: 24px;
     }
-
-    .login-container input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      background: #1a1a1a;
-      border: 1px solid #00d0ff;
-      border-radius: 8px;
-      color: #00d0ff;
-    }
-
-    .login-container button {
-      width: 100%;
-      padding: 12px;
-      background: #00d0ff;
-      border: none;
-      border-radius: 8px;
-      margin-top: 15px;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .login-container button:hover {
-      background: #00aacc;
-    }
-
-    .alt-logins button {
-      width: 100%;
-      background: transparent;
-      color: #00d0ff;
-      border: 1px solid #00d0ff;
-      margin-top: 10px;
-    }
-
-    .alt-logins button:hover {
-      background: #00d0ff;
-      color: #000;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <canvas id="puzzleCanvas"></canvas>
