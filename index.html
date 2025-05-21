@@ -23,17 +23,16 @@
   }
 
   .login-container {
-    margin: auto;
-    margin-top: 5vh;
-    width: 90%;
-    max-width: 400px;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 30px 20px;
-    border-radius: 16px;
-    box-shadow: 0 0 20px #00d0ff90;
-    text-align: center;
-    z-index: 1;
-  }
+  margin: 40px auto 20px auto;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(10, 10, 10, 0.9);
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00d0ff90;
+  text-align: center;
+}
+
 
   .login-container img {
     width: 100px;
@@ -88,20 +87,20 @@
     color: #000;
   }
 
-  @media (min-width: 768px) {
-    .login-container {
-      margin-top: 10vh;
-      padding: 40px 30px;
-    }
-
-    .login-container img {
-      width: 120px;
-    }
-
-    .login-container h1 {
-      font-size: 30px;
-    }
+/* Centraliza vertical só em telas grandes */
+@media (min-width: 768px) {
+  body, html {
+    height: 100%;
   }
+
+  .login-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 </style>
 </head>
 <body>
