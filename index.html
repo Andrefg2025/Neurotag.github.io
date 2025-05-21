@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Neurotag - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+      background: #000;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 360px;
+      background: rgba(10, 10, 10, 0.9);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #00d0ff90;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .login-container img {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+
+    .login-container h1 {
+      color: #00d0ff;
+      margin-bottom: 30px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #1a1a1a;
+      border: 1px solid #00d0ff;
+      border-radius: 8px;
+      color: #00d0ff;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background: #00d0ff;
+      border: none;
+      border-radius: 8px;
+      margin-top: 15px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-container button:hover {
+      background: #00aacc;
+    }
+
+    .alt-logins button {
+      width: 100%;
+      background: transparent;
+      color: #00d0ff;
+      border: 1px solid #00d0ff;
+      margin-top: 10px;
+    }
+
+    .alt-logins button:hover {
+      background: #00d0ff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="puzzleCanvas"></canvas>
+
+  <div class="login-container">
+    <img src="logo.png" alt="Logo Neurotag" />
+    <h1>NEUROTAG</h1>
+    <input type="text" placeholder="Usuário" />
+    <input type="password" placeholder="Senha" />
+    <button>Entrar</button>
+    <div class="alt-logins">
+      <button>Entrar com e-mail</button>
+      <button>Entrar com Google</button>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('puzzleCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function drawPuzzleGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const size = 60; // tamanho base da peça
+      const tabSize = 15; // tamanho das "orelhas" das peças
+      const glowColor = "#00d0ff";
+
+      function drawPiece(x, y, top, right, bottom, left) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.beginPath();
+
+        ctx.moveTo(0, 0);
+
+        // topo
+        if (top === null) {
+          ctx.lineTo(size, 0);
+        } else {
+          ctx.lineTo(size / 3, 0);
+          ctx.bezierCurveTo(
+            size / 3 + tabSize / 2,
+            top ? -tabSize : tabSize,
+            2 * size / 3 - tabSize / 2,
+            top ? -tabSize : tabSize,
+            2 * size / 3,
+            0
+          );
+          ctx.lineTo(size, 0);
+        }
+
+        // direita
+        if (right === null) {
+          ctx.lineTo(size, size);
+        } else {
+          ctx.lineTo(size, size / 3);
+          ctx.bezierCurveTo(
+            right ? size + tabSize : size - tabSize,
+            size / 3 + tabSize / 2,
+            right ? size + tabSize : size - tabSize,
+            2 * size / 3 - tabSize / 2,
+            size,
+            2 * size / 3
+          );
+          ctx.lineTo(size, size);
+        }
+
+        // baixo
+        if (bottom === null) {
+          ctx.lineTo(0, size);
+        } else {
+          ctx.lineTo(2 * size / 3, size);
+          ctx.bezierCurveTo(
+            2 * size / 3 - tabSize / 2,
+            bottom ? size + tabSize : size - tabSize,
+            size / 3 + tabSize / 2,
+            bottom ? size + tabSize : size - tabSize,
+            size / 3,
+            size
+          );
+          ctx.lineTo(0, size);
+        }
+
+        // esquerda
+        if (left === null) {
+          ctx.closePath();
+        } else {
+          ctx.lineTo(0, 2 * size / 3);
+          ctx.bezierCurveTo(
+            left ? -tabSize : tabSize,
+            2 * size / 3 - tabSize / 2,
+            left ? -tabSize : tabSize,
+            size / 3 + tabSize / 2,
+            0,
+            size / 3
+          );
+          ctx.closePath();
+        }
+
+        ctx.fillStyle = "#0a0a0a";
+        ctx.fill();
+
+        ctx.shadowColor = glowColor;
+        ctx.shadowBlur = 8;
+        ctx.strokeStyle = glowColor;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        ctx.restore();
+      }
+
+      const cols = Math.ceil(canvas.width / size);
+      const rows = Math.ceil(canvas.height / size);
+
+      const tabsHorizontal = [];
+      const tabsVertical = [];
+
+      for (let y = 0; y <= rows; y++) {
+        tabsHorizontal[y] = [];
+        for (let x = 0; x < cols; x++) {
+          if (y === 0 || y === rows) {
+            tabsHorizontal[y][x] = null;
+          } else {
+            tabsHorizontal[y][x] = Math.random() > 0.5;
+          }
+        }
+      }
+
+      for (let y = 0; y < rows; y++) {
+        tabsVertical[y] = [];
+        for (let x = 0; x <= cols; x++) {
+          if (x === 0 || x === cols) {
+            tabsVertical[y][x] = null;
+          } else {
+            tabsVertical[y][x] = Math.random() > 0.5;
+          }
+        }
+      }
+
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const top = y === 0 ? null : !tabsHorizontal[y][x];
+          const right = x === cols - 1 ? null : tabsVertical[y][x + 1];
+          const bottom = y === rows - 1 ? null : tabsHorizontal[y + 1][x];
+          const left = x === 0 ? null : !tabsVertical[y][x];
+
+          drawPiece(x * size, y * size, top, right, bottom, left);
+        }
+      }
+    }
+
+    function animateBackground() {
+  drawPuzzleGrid();
+}
+
+// Chame só uma vez na inicialização e no resize
+window.addEventListener('resize', () => {
+  resizeCanvas();
+  drawPuzzleGrid();
+});
+
+resizeCanvas();
+drawPuzzleGrid();
+  </script>
+</body>
+</html>
