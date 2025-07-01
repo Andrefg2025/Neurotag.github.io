@@ -61,12 +61,12 @@ button {
     border: none;
     border-radius: 4px;
     color: white;
-    background-color: #fffff;
+    background-color: #008B8B;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #fffffff;
+    background-color: #008B8B;
 }
 
 #message {
