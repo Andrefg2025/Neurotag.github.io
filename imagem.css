@@ -2,7 +2,7 @@
 .livro-imagem {
   display: block;
   max-width: 30%;          /* Imagem ocupa até 80% da largura da página */
-  height: auto;
+  height: 30%;
   margin: 40px auto;       /* Centraliza e dá espaçamento vertical */
   border: 1px solid #ccc;  /* Borda cinza clara */
   padding: 10px;
