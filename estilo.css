@@ -11,7 +11,7 @@
     }
     
     header {
-        background-color: #045f6b;
+        background-color: #08424a;
         padding: 5px;
         display: flex;
         justify-content: space-between;
@@ -20,7 +20,7 @@
         overflow: hidden;
     }
     header.hover {
-        color: #c9f0c1;
+        color: #08424a;
         transform: scale(1.1);
     }
     
@@ -132,45 +132,7 @@
         display: block;
         margin: 20px 0;
     }
-    .creditos{
-        padding: 20px;
-        font-size: 35px;
-        line-height: 1.6;
-        margin: 0 auto;
-        text-align: relative;
-    }
-
-    .creditos h1{
-        font-size: 2em;
-        color: #ffffff;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background: #05461b;
-        position: relative;
-        overflow: hidden;
-
-    }
-
-    .creditos h1::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -75%;
-        width: 50%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.2);
-        transform: skewX(-25deg);
-        transition: left 0.7s ease-in-out;
-    }
-
-    .creditos h1:hover::before{
-        left: 125%;
-
-    }
+    
     .ultimo p{
         color:#05461b;
         font-size: 35px;
