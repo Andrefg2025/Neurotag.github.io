@@ -1,330 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto</title>
-    <link rel="stylesheet" href="estilo.css">
-     <link rel="shortcut icon" type="image/x-icon" href="L1.ico">
-    <style>
-         {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="shortcut icon" type="image/x-icon" href="L1.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      font-size: 18px;
+    }
 
-        header {
-        background-color: #08424a;
-        padding: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
+    body {
+      background-color: #f4f4f4;
+      color: #333;
     }
-    header.hover {
-        color: #c9f0c1;
-        transform: scale(1.1);
+
+    header.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #08424a;
+      flex-wrap: wrap;
     }
-    
-    header .logo img {
-        width: 130px;
+
+    .logo-left img {
+      width: 130px;
     }
-    
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
     nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 60px;
+      padding: 0;
+      margin: 0;
     }
-    
-    nav ul li {
-        margin-right: 150px;
-        position: relative;
-    }
-    
+
     nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px 15px;
-        display: block;
-        transition: color 0.3s, transform 0.3s;
-        border-radius: 4px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      transition: color 0.3s, transform 0.3s;
+      border-radius: 4px;
+      position: relative;
     }
-    
-    
+
     nav ul li a:hover {
-        color: #5270a1;
-        transform: scale(1.1);
+      color: #c9f0c1;
+      transform: scale(1.1);
     }
-    
-   
+
     nav ul li a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: #5270a1;
-        left: 0;
-        bottom: 0;
-        transition: width 0.3s;
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #c9f0c1;
+      left: 0;
+      bottom: 0;
+      transition: width 0.3s;
     }
-    
+
     nav ul li a:hover::after,
     nav ul li.active a::after {
-        width: 100%;
+      width: 100%;
     }
-    
-    
+
     nav ul li.active a {
-        color: #5270a1;
-        font-weight: bold;
+      color: #c9f0c1;
+      font-weight: bold;
     }
-        .menu-btn {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
 
-        .menu-btn div {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-            margin: 5px 0;
-            transition: 0.3s;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        nav {
-            display: flex;
-        }
+    .diario-title {
+      text-align: center;
+      font-size: 3em;
+      color: #333;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+    @media (max-width: 768px) {
+      header.header {
+        flex-direction: column;
+        align-items: center;
+      }
 
-        nav ul li {
-            margin-right: 20px;
-            position: relative;
-        }
+      nav {
+        justify-content: center;
+        width: 100%;
+      }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 15px;
-            display: block;
-            transition: color 0.3s, transform 0.3s;
-            border-radius: 4px;
-        }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
 
-        nav ul li a:hover {
-            color: #c9f0c1;
-            transform: scale(1.1);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #c9f0c1;
-            left: 0;
-            bottom: 0;
-            transition: width 0.3s;
-        }
-
-        nav ul li a:hover::after,
-        nav ul li.active a::after {
-            width: 100%;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .diario-title {
-            text-align: center;
-            font-size: 3em;
-            color: #333;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .entry-list {
-            margin-bottom: 40px;
-        }
-
-        .entry {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-left: 5px solid #08424a;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .entry:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .entry h3 {
-            font-size: 1.7em;
-            margin-bottom: 10px;
-            color: #08424a;
-        }
-
-        .entry p {
-            font-size: 1.1em;
-            color: #333;
-            position: left;
-        }
-
-        .new-entry-form {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .new-entry-form h3 {
-            font-size: 1.8em;
-            color: #08424a;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-        }
-
-        .new-entry-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1em;
-            color: #08424a;
-        }
-
-        .new-entry-form input[type="text"],
-        .new-entry-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-            color: #333;
-            background-color: #fff;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .new-entry-form input[type="text"]:focus,
-        .new-entry-form textarea:focus {
-            border-color: #08424a;
-            box-shadow: 0 0 8px rgba(5, 70, 27, 0.3);
-        }
-
-        .new-entry-form input[type="submit"] {
-            background-color: #08424a;
-            color: #fff;
-            border: none;
-            padding: 12px 20px;
-            font-size: 1.2em;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .new-entry-form input[type="submit"]:hover {
-            background-color: #0b6e19;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            header h1 {
-                font-size: 1.6em;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-            }
-
-            nav ul li {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-
-            .menu-btn {
-                display: flex;
-                margin-top: 10px;
-            }
-
-            nav {
-                display: none;
-                width: 100%;
-                background-color: #08424a;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                border-radius: 0 0 10px 10px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            }
-
-            nav.active {
-                display: flex;
-            }
-        }
-
-    </style>
+      .logo-left {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <img src="L1.png" alt="Logo da Marca">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index3.html">Projeto</a></li>
-                <li class="active"><a href="index4.html">Diário de Bordo</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="diario-title">Diário de Bordo</div>
-
-       
-       
+  <header class="header">
+    <div class="logo-left">
+      <img src="L1.png" alt="Logo da Marca">
     </div>
 
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index3.html">Projeto</a></li>
+        <li class="active"><a href="index4.html">Diário de Bordo</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script>
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-    </script>
+  <div class="container">
+    <div class="diario-title">Diário de Bordo</div>
+  </div>
+
 </body>
 </html>
