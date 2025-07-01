@@ -11,7 +11,7 @@
     }
     
     header {
-        background-color: #08424a;
+        background-color: #1a3033;
         padding: 5px;
         display: flex;
         justify-content: space-between;
@@ -20,7 +20,7 @@
         overflow: hidden;
     }
     header.hover {
-        color: #08424a;
+        color: #1a3033;
         transform: scale(1.1);
     }
     
