@@ -1,0 +1,107 @@
+/* Layout geral */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Alinhamento de parágrafos */
+.paragrafo,
+.paragrafo p,
+.ultimo p {
+  text-align: justify;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Logotipo à esquerda */
+.logo-left img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Logotipo à direita */
+.logo-right img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Navegação */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Estilo específico para cada aba */
+nav li:nth-child(1) a {
+  color: #008B8B;
+}
+
+nav li:nth-child(2) a {
+  color: #5F9EA0;
+}
+
+nav li:nth-child(3) a {
+  color: #20B2AA;
+}
+
+/* Hover para cada aba */
+nav li:nth-child(1) a:hover {
+  background-color: #e0ffff;
+  color: #004d4d;
+}
+
+nav li:nth-child(2) a:hover {
+  background-color: #f0ffff;
+  color: #2F4F4F;
+}
+
+nav li:nth-child(3) a:hover {
+  background-color: #f5fffa;
+  color: #2E8B57;
+}
+
+/* Aba ativa */
+nav li.active a {
+  border-bottom: 3px solid #008B8B;
+  color: #004d4d;
+}
+
+/* Título principal */
+.title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.title h1 {
+  font-size: 36px;
+  color: #008B8B;
+}
