@@ -130,7 +130,7 @@ body {
 
 .logo-left img,
 .logo-right img {
-  max-width: 100px;
+  max-width: 50px;
   height: auto;
 }
 
@@ -173,7 +173,7 @@ nav li a:hover {
 /* Imagens estilo livro */
 .livro-imagem {
   display: block;
-  max-width: 90%;
+  max-width: 50%;
   margin: 40px auto;
   border: 1px solid #ccc;
   padding: 10px;
@@ -188,7 +188,7 @@ nav li a:hover {
   color: #555;
   margin-top: 8px;
   font-style: italic;
-  max-width: 90%;
+  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -207,11 +207,11 @@ nav li a:hover {
 
   .logo-left img,
   .logo-right img {
-    max-width: 80px;
+    max-width: 50px;
   }
 
   .livro-imagem {
-    max-width: 100%;
+    max-width: 50%;
   }
 }
 
@@ -231,7 +231,7 @@ nav li a:hover {
   .livro-imagem {
     border: none;
     box-shadow: none;
-    max-width: 100%;
+    max-width: 50%;
   }
 
   .legenda-imagem {
