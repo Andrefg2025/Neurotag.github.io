@@ -1,4 +1,5 @@
-{
+<style>
+    {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -12,7 +13,7 @@
     }
 
     header {
-      background-color: #071c40; /* Cor da barra superior */
+      background-color: #456396; /* Cor da barra superior */
       padding: 20px;
     }
 
