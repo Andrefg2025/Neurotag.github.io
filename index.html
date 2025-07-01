@@ -1,43 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurotag</title>
-    <link rel="stylesheet" href="estilo.css">
-         <link rel="shortcut icon" type="image/x-icon" href="L1.ico">
-    <style>
-  .paragrafo, .paragrafo p, .ultimo p {
-    text-align: justify;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurotag</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="shortcut icon" type="image/x-icon" href="L1.ico">
+  <style>
+    .paragrafo, .paragrafo p, .ultimo p {
+      text-align: justify;
+    }
+
+    header.header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    nav li a:hover {
+      color: #007bff;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-                      
-     
-    <header class="header">
-        <div class="logo">
-            <img src="L1.png" alt="Logo da Marca" width="150" heigth="150">
-        </div>
-        <nav>
-            <ul>
-                <li class="active"><a href="index.html">Início</a></li>
-                <li><a href="index5.html">Projeto</a></li>
-                <li><a href="index4.html">Diário de Bordo</a></li>
-                
-            </ul>
-        </nav>
-    </header>
 
-    <div class="title">
-        <h1>Neurotag</h1>
+  <header class="header">
+    <div class="logo">
+      <img src="L1.png" alt="Logo da Marca" width="150" height="150">
     </div>
-    <div class="paragrafo">
-        CRIAR UM TEXTO ONDE VOCÊS SÃO OS PROTAGONISTAS DO PROJETO: DESAFIO, TRABALHO EM EQUIPE, ADMINISTRAÇÃO DO TEMPO, FOCO, OBJETIVO, TEXTO DEVE CONTER A PARTICIPAÇÃO DA CADA INTEGRANTE DO PROJETO, REUNIÕES, PLANEJAMENTO, ETC.
-    </div>
-    <div class="ultimo">
-      
-    </div><br><br><br><br><br><br><BR><BR>
+    <nav>
+      <ul>
+        <li class="active"><a href="index.html">Início</a></li>
+        <li><a href="index5.html">Projeto</a></li>
+        <li><a href="index4.html">Diário de Bordo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="title">
+    <h1>Neurotag</h1>
+  </div>
+
+  <div class="paragrafo">
+    CRIAR UM TEXTO ONDE VOCÊS SÃO OS PROTAGONISTAS DO PROJETO: DESAFIO, TRABALHO EM EQUIPE, ADMINISTRAÇÃO DO TEMPO, FOCO, OBJETIVO, TEXTO DEVE CONTER A PARTICIPAÇÃO DA CADA INTEGRANTE DO PROJETO, REUNIÕES, PLANEJAMENTO, ETC.
+  </div>
+
+  <div class="ultimo"></div>
+  <br><br><br><br><br><br><br><br>
 
 </body>
 </html>
