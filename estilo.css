@@ -1,42 +1,41 @@
-/* Layout geral */
+/* RESET E BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-}
-
-/* Alinhamento de parágrafos */
-.paragrafo,
-.paragrafo p,
-.ultimo p {
-  text-align: justify;
-  padding: 20px;
   line-height: 1.6;
+  background-color: #fefefe;
+  color: #222;
+  padding: 0 10px;
 }
 
-/* Cabeçalho */
+/* CABEÇALHO */
 header.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
   flex-wrap: wrap;
+  padding: 10px 40px;
   background-color: #143c4d;
   border-bottom: 2px solid #ccc;
 }
 
-/* Logotipo à esquerda */
 .logo-left img {
   max-width: 150px;
   height: auto;
 }
 
-/* Logotipo à direita */
 .logo-right img {
   max-width: 120px;
   height: auto;
 }
 
-/* Navegação */
+/* NAVEGAÇÃO */
 nav {
   flex: 1;
   display: flex;
@@ -49,6 +48,8 @@ nav ul {
   gap: 40px;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav li a {
@@ -57,128 +58,80 @@ nav li a {
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 6px;
+  color: #008B8B;
   transition: all 0.3s ease;
 }
 
-/* Estilo específico para cada aba */
-nav li:nth-child(1) a {
-  color: #008B8B;
-}
+nav li:nth-child(1) a { color: #008B8B; }
+nav li:nth-child(2) a { color: #5F9EA0; }
+nav li:nth-child(3) a { color: #20B2AA; }
 
-nav li:nth-child(2) a {
-  color: #5F9EA0;
-}
-
-nav li:nth-child(3) a {
-  color: #20B2AA;
-}
-
-/* Hover para cada aba */
 nav li:nth-child(1) a:hover {
   background-color: #e0ffff;
   color: #004d4d;
 }
-
 nav li:nth-child(2) a:hover {
   background-color: #f0ffff;
   color: #2F4F4F;
 }
-
 nav li:nth-child(3) a:hover {
   background-color: #f5fffa;
   color: #2E8B57;
 }
 
-/* Aba ativa */
 nav li.active a {
   border-bottom: 3px solid #008B8B;
   color: #004d4d;
 }
 
-/* Título principal */
-.title {
-  text-align: center;
-  margin-top: 30px;
-}
-
-
-/* Reset e base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #fefefe;
-  color: #222;
-  padding: 0 10px;
-}
-
-/* Cabeçalho e navegação */
-.header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 2px solid #ccc;
-  background-color: #f9f9f9;
-}
-
-.logo-left img,
-.logo-right img {
-  max-width: 50px;
-  height: auto;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav li a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  color: #008B8B;
-  padding: 5px 10px;
-  transition: background-color 0.3s;
-}
-
-nav li.active a,
 nav li a:hover {
   border-bottom: 2px solid #008B8B;
   color: #004d4d;
 }
 
-/* Conteúdo */
+/* TÍTULO */
 .title {
   text-align: center;
   margin: 30px 0;
 }
 
-.paragrafo {
-  max-width: 800px;
-  margin: 0 auto 20px;
-  text-align: justify;
-  padding: 0 15px;
+.title h1 {
+  font-size: 36px;
+  color: #008B8B;
 }
 
-/* Imagens estilo livro */
+/* PARÁGRAFOS */
+.paragrafo,
+.paragrafo p,
+.ultimo p {
+  text-align: justify;
+  padding: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* IMAGENS */
 .livro-imagem {
   width: 300px;
   height: 200px;
   object-fit: cover;
   display: block;
   margin: 20px auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
+/* GALERIA HORIZONTAL */
+.galeria-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* LEGENDA */
 .legenda-imagem {
   text-align: center;
   font-size: 14px;
@@ -190,7 +143,7 @@ nav li a:hover {
   margin-right: auto;
 }
 
-/* Responsividade */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -208,11 +161,12 @@ nav li a:hover {
   }
 
   .livro-imagem {
-    max-width: 50%;
+    width: 90%;
+    height: auto;
   }
 }
 
-/* Impressão */
+/* IMPRESSÃO */
 @media print {
   body {
     background: none;
@@ -225,33 +179,15 @@ nav li a:hover {
     display: none;
   }
 
-  .galeria-horizontal {
-  display: flex;
-  flex-wrap: wrap; /* permite quebrar linha automaticamente */
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.livro-imagem {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-}
-  @media (max-width: 768px) {
   .livro-imagem {
-    width: 90%;
+    width: 300px;
     height: auto;
+    border: none;
+    box-shadow: none;
   }
-}
+
   .legenda-imagem {
     color: black;
     font-size: 12pt;
-}
-
-.title h1 {
-  font-size: 36px;
-  color: #008B8B;
+  }
 }
