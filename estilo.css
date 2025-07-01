@@ -11,7 +11,7 @@
     }
     
     header {
-        background-color: #1a3033;
+        background-color:#ffffff;
         padding: 5px;
         display: flex;
         justify-content: space-between;
@@ -20,7 +20,7 @@
         overflow: hidden;
     }
     header.hover {
-        color: #1a3033;
+        color: #ffffff;
         transform: scale(1.1);
     }
     
@@ -41,7 +41,7 @@
     }
     
     nav ul li a {
-        color: #fff;
+        color: #ffffff;
         text-decoration: none;
         font-size: 18px;
         padding: 10px 15px;
@@ -52,7 +52,7 @@
     
     
     nav ul li a:hover {
-        color: #c9f0c1;
+        color: #ffffff;
         transform: scale(1.1);
     }
     
@@ -62,7 +62,7 @@
         position: absolute;
         width: 0;
         height: 2px;
-        background-color: #c9f0c1;
+        background-color: #ffffff;
         left: 0;
         bottom: 0;
         transition: width 0.3s;
@@ -75,7 +75,7 @@
     
     
     nav ul li.active a {
-        color: #c9f0c1;
+        color: #ffffff;
         font-weight: bold;
     }
     .title h1 {
@@ -109,7 +109,7 @@
     }
 
     .title2{
-        color:#fff;
+        color:#ffffff;
         background: #ffffff;
         text-align: center;
         padding: 15px;
@@ -134,14 +134,14 @@
     }
     
     .ultimo p{
-        color:#05461b;
+        color:#ffffff;
         font-size: 35px;
         padding: 20px;
         line-height: 1.6;
         text-decoration: underline;
     }
     .mais {
-        color:#05461b;
+        color:#ffffff;
         font-size: 35px;
         padding: 20px;
         line-height: 1.6;
