@@ -1,0 +1,47 @@
+/* === Estilo para Imagens tipo Livro ou PDF === */
+.livro-imagem {
+  display: block;
+  max-width: 80%;          /* Imagem ocupa até 80% da largura da página */
+  height: auto;
+  margin: 40px auto;       /* Centraliza e dá espaçamento vertical */
+  border: 1px solid #ccc;  /* Borda cinza clara */
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra leve */
+  page-break-inside: avoid; /* Evita quebra no meio da imagem ao imprimir */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito suave ao passar o mouse */
+.livro-imagem:hover {
+  transform: scale(1.02);
+}
+
+/* Legenda abaixo da imagem */
+.legenda-imagem {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  margin-top: 8px;
+  font-style: italic;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ajuste para impressão em PDF */
+@media print {
+  .livro-imagem {
+    max-width: 100%;
+    box-shadow: none;
+    border: none;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .legenda-imagem {
+    font-size: 12pt;
+    color: black;
+    page-break-inside: avoid;
+  }
+}
