@@ -1,132 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diário de Bordo – Neurotag</title>
-  <link rel="stylesheet" href="estilo.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário de Bordo – Folhear Revista</title>
   <link rel="shortcut icon" href="L1.ico" type="image/x-icon" />
-
-  <!-- ESTILO EXCLUSIVO PARA O DIÁRIO DE BORDO -->
   <style>
-    .livro {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      max-width: 1000px;
-      justify-content: center;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+    }
+    .title h1 {
+      font-size: 36px;
+      color: #008B8B;
+    }
+    .book {
+      width: 900px;
+      height: 600px;
       margin: 40px auto;
     }
-
-    .pagina {
-      width: 45%;
-      aspect-ratio: 3 / 4;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      background: white;
+    .page {
+      width: 450px;
+      height: 600px;
       overflow: hidden;
-      border: 1px solid #ccc;
-      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: #fff;
     }
-
-    .pagina:hover {
-      transform: scale(1.02);
-    }
-
-    .pagina img {
+    .page img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
-    @media (max-width: 768px) {
-      .pagina {
-        width: 90%;
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #008B8B;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    .buttons button:hover {
+      background-color: #005f5f;
+    }
+    @media (max-width: 960px) {
+      .book {
+        width: 100%;
+        height: auto;
+      }
+      .page {
+        width: 50vw;
+        height: 75vw;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="logo-left">
-      <img src="L1.png" alt="Logo da Marca" />
-    </div>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="Projeto.html">Projeto</a></li>
-        <li class="active"><a href="Diariodebordo.html">Diário de Bordo</a></li>
-      </ul>
-    </nav>
-
-    <div class="logo-right">
-      <img src="L3.png" alt="Logo da Escola" />
-    </div>
-  </header>
-
   <div class="title">
     <h1>Diário de Bordo</h1>
   </div>
 
-  <div class="paragrafo">
-    <p><strong>01/06 – Primeira Reunião:</strong> Discussão sobre o tema do projeto, definição de papéis e prazos.</p>
-    <p><strong>05/06 – Pesquisa:</strong> Levantamento de informações sobre sensores, IA e tecnologias assistivas.</p>
-    <p><strong>10/06 – Desenvolvimento Inicial:</strong> Criação do protótipo básico e esboço de funcionalidades.</p>
-    <p><strong>15/06 – Ajustes:</strong> Melhorias na parte técnica e definição da apresentação final.</p>
+  <div class="book" id="flipbook">
+    <!-- Páginas do livro -->
+    
+    <!-- Gerado automaticamente de 1 a 47 -->
+    <!-- O 48º é uma página em branco para paridade -->
+    
+    <!-- Abaixo segue o loop HTML gerado manualmente -->
+    
+    <!-- Páginas pares/impáres -->
+    <!-- Começa aqui -->
+    
+    <!-- Adicione as 47 imagens -->
+    <!-- Exemplos abaixo -->
+    
+    <!-- Begin image pages -->
+    <div class="page"><img src="D/Neurotag_1.jpg" alt="Página 1"></div>
+    <div class="page"><img src="D/Neurotag_2.jpg" alt="Página 2"></div>
+    <div class="page"><img src="D/Neurotag_3.jpg" alt="Página 3"></div>
+    <div class="page"><img src="D/Neurotag_4.jpg" alt="Página 4"></div>
+    <div class="page"><img src="D/Neurotag_5.jpg" alt="Página 5"></div>
+    <div class="page"><img src="D/Neurotag_6.jpg" alt="Página 6"></div>
+    <div class="page"><img src="D/Neurotag_7.jpg" alt="Página 7"></div>
+    <div class="page"><img src="D/Neurotag_8.jpg" alt="Página 8"></div>
+    <div class="page"><img src="D/Neurotag_9.jpg" alt="Página 9"></div>
+    <div class="page"><img src="D/Neurotag_10.jpg" alt="Página 10"></div>
+    <div class="page"><img src="D/Neurotag_11.jpg" alt="Página 11"></div>
+    <div class="page"><img src="D/Neurotag_12.jpg" alt="Página 12"></div>
+    <div class="page"><img src="D/Neurotag_13.jpg" alt="Página 13"></div>
+    <div class="page"><img src="D/Neurotag_14.jpg" alt="Página 14"></div>
+    <div class="page"><img src="D/Neurotag_15.jpg" alt="Página 15"></div>
+    <div class="page"><img src="D/Neurotag_16.jpg" alt="Página 16"></div>
+    <div class="page"><img src="D/Neurotag_17.jpg" alt="Página 17"></div>
+    <div class="page"><img src="D/Neurotag_18.jpg" alt="Página 18"></div>
+    <div class="page"><img src="D/Neurotag_19.jpg" alt="Página 19"></div>
+    <div class="page"><img src="D/Neurotag_20.jpg" alt="Página 20"></div>
+    <div class="page"><img src="D/Neurotag_21.jpg" alt="Página 21"></div>
+    <div class="page"><img src="D/Neurotag_22.jpg" alt="Página 22"></div>
+    <div class="page"><img src="D/Neurotag_23.jpg" alt="Página 23"></div>
+    <div class="page"><img src="D/Neurotag_24.jpg" alt="Página 24"></div>
+    <div class="page"><img src="D/Neurotag_25.jpg" alt="Página 25"></div>
+    <div class="page"><img src="D/Neurotag_26.jpg" alt="Página 26"></div>
+    <div class="page"><img src="D/Neurotag_27.jpg" alt="Página 27"></div>
+    <div class="page"><img src="D/Neurotag_28.jpg" alt="Página 28"></div>
+    <div class="page"><img src="D/Neurotag_29.jpg" alt="Página 29"></div>
+    <div class="page"><img src="D/Neurotag_31.jpg" alt="Página 31"></div>
+    <div class="page"><img src="D/Neurotag_32.jpg" alt="Página 32"></div>
+    <div class="page"><img src="D/Neurotag_33.jpg" alt="Página 33"></div>
+    <div class="page"><img src="D/Neurotag_34.jpg" alt="Página 34"></div>
+    <div class="page"><img src="D/Neurotag_35.jpg" alt="Página 35"></div>
+    <div class="page"><img src="D/Neurotag_36.jpg" alt="Página 36"></div>
+    <div class="page"><img src="D/Neurotag_37.jpg" alt="Página 37"></div>
+    <div class="page"><img src="D/Neurotag_38.jpg" alt="Página 38"></div>
+    <div class="page"><img src="D/Neurotag_39.jpg" alt="Página 39"></div>
+    <div class="page"><img src="D/Neurotag_40.jpg" alt="Página 40"></div>
+    <div class="page"><img src="D/Neurotag_41.jpg" alt="Página 41"></div>
+    <div class="page"><img src="D/Neurotag_42.jpg" alt="Página 42"></div>
+    <div class="page"><img src="D/Neurotag_43.jpg" alt="Página 43"></div>
+    <div class="page"><img src="D/Neurotag_44.jpg" alt="Página 44"></div>
+    <div class="page"><img src="D/Neurotag_45.jpg" alt="Página 45"></div>
+    <div class="page"><img src="D/Neurotag_46.jpg" alt="Página 46"></div>
+    <div class="page"><img src="D/Neurotag_47.jpg" alt="Página 47"></div>
+    <div class="page"></div> <!-- Página em branco para completar o par -->
   </div>
 
-  <!-- Galeria estilo livro -->
-  <section class="livro">
-    <!-- Imagens 1 até 47 -->
-    <div class="pagina"><img src="D/Neurotag_1.jpg" alt="Página 1"></div>
-    <div class="pagina"><img src="D/Neurotag_2.jpg" alt="Página 2"></div>
-    <div class="pagina"><img src="D/Neurotag_3.jpg" alt="Página 3"></div>
-    <div class="pagina"><img src="D/Neurotag_4.jpg" alt="Página 4"></div>
-    <div class="pagina"><img src="D/Neurotag_5.jpg" alt="Página 5"></div>
-    <div class="pagina"><img src="D/Neurotag_6.jpg" alt="Página 6"></div>
-    <div class="pagina"><img src="D/Neurotag_7.jpg" alt="Página 7"></div>
-    <div class="pagina"><img src="D/Neurotag_8.jpg" alt="Página 8"></div>
-    <div class="pagina"><img src="D/Neurotag_9.jpg" alt="Página 9"></div>
-    <div class="pagina"><img src="D/Neurotag_10.jpg" alt="Página 10"></div>
-    <div class="pagina"><img src="D/Neurotag_11.jpg" alt="Página 11"></div>
-    <div class="pagina"><img src="D/Neurotag_12.jpg" alt="Página 12"></div>
-    <div class="pagina"><img src="D/Neurotag_13.jpg" alt="Página 13"></div>
-    <div class="pagina"><img src="D/Neurotag_14.jpg" alt="Página 14"></div>
-    <div class="pagina"><img src="D/Neurotag_15.jpg" alt="Página 15"></div>
-    <div class="pagina"><img src="D/Neurotag_16.jpg" alt="Página 16"></div>
-    <div class="pagina"><img src="D/Neurotag_17.jpg" alt="Página 17"></div>
-    <div class="pagina"><img src="D/Neurotag_18.jpg" alt="Página 18"></div>
-    <div class="pagina"><img src="D/Neurotag_19.jpg" alt="Página 19"></div>
-    <div class="pagina"><img src="D/Neurotag_20.jpg" alt="Página 20"></div>
-    <div class="pagina"><img src="D/Neurotag_21.jpg" alt="Página 21"></div>
-    <div class="pagina"><img src="D/Neurotag_22.jpg" alt="Página 22"></div>
-    <div class="pagina"><img src="D/Neurotag_23.jpg" alt="Página 23"></div>
-    <div class="pagina"><img src="D/Neurotag_24.jpg" alt="Página 24"></div>
-    <div class="pagina"><img src="D/Neurotag_25.jpg" alt="Página 25"></div>
-    <div class="pagina"><img src="D/Neurotag_26.jpg" alt="Página 26"></div>
-    <div class="pagina"><img src="D/Neurotag_27.jpg" alt="Página 27"></div>
-    <div class="pagina"><img src="D/Neurotag_28.jpg" alt="Página 28"></div>
-    <div class="pagina"><img src="D/Neurotag_29.jpg" alt="Página 29"></div>
-    <div class="pagina"><img src="D/Neurotag_30.jpg" alt="Página 30"></div>
-    <div class="pagina"><img src="D/Neurotag_31.jpg" alt="Página 31"></div>
-    <div class="pagina"><img src="D/Neurotag_32.jpg" alt="Página 32"></div>
-    <div class="pagina"><img src="D/Neurotag_33.jpg" alt="Página 33"></div>
-    <div class="pagina"><img src="D/Neurotag_34.jpg" alt="Página 34"></div>
-    <div class="pagina"><img src="D/Neurotag_35.jpg" alt="Página 35"></div>
-    <div class="pagina"><img src="D/Neurotag_36.jpg" alt="Página 36"></div>
-    <div class="pagina"><img src="D/Neurotag_37.jpg" alt="Página 37"></div>
-    <div class="pagina"><img src="D/Neurotag_38.jpg" alt="Página 38"></div>
-    <div class="pagina"><img src="D/Neurotag_39.jpg" alt="Página 39"></div>
-    <div class="pagina"><img src="D/Neurotag_40.jpg" alt="Página 40"></div>
-    <div class="pagina"><img src="D/Neurotag_41.jpg" alt="Página 41"></div>
-    <div class="pagina"><img src="D/Neurotag_42.jpg" alt="Página 42"></div>
-    <div class="pagina"><img src="D/Neurotag_43.jpg" alt="Página 43"></div>
-    <div class="pagina"><img src="D/Neurotag_44.jpg" alt="Página 44"></div>
-    <div class="pagina"><img src="D/Neurotag_45.jpg" alt="Página 45"></div>
-    <div class="pagina"><img src="D/Neurotag_46.jpg" alt="Página 46"></div>
-    <div class="pagina"><img src="D/Neurotag_47.jpg" alt="Página 47"></div>
-  </section>
+  <div class="buttons">
+    <button onclick="$('#flipbook').turn('previous')">Anterior</button>
+    <button onclick="$('#flipbook').turn('next')">Próximo</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <script>
+    $('#flipbook').turn({
+      width: 900,
+      height: 600,
+      autoCenter: true,
+      elevation: 50,
+      gradients: true,
+      duration: 1000
+    });
+  </script>
 
 </body>
 </html>
