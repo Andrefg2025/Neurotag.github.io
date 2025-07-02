@@ -122,27 +122,29 @@ nav li a:hover {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
-/* GALERIA HORIZONTAL */
 .galeria-horizontal {
   display: flex;
-  flex-wrap: wrap; /* permite quebrar para nova linha */
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 30px;
   padding: 20px;
 }
 
 .livro-imagem {
-  width: 45vw;       /* usa 45% da largura da tela */
+  width: 45vw;
+  max-width: 400px;
   height: auto;
-  object-fit: cover;
   border: 1px solid #ccc;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  object-fit: cover;
   transition: transform 0.2s;
 }
 
 .livro-imagem:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
+
+/* Responsivo para celular */
 @media (max-width: 768px) {
   .livro-imagem {
     width: 90vw;
