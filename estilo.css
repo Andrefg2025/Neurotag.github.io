@@ -6,7 +6,6 @@
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #fefefe;
@@ -58,8 +57,8 @@ nav li a {
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 6px;
-  color: #008B8B;
   transition: all 0.3s ease;
+  color: #008B8B;
 }
 
 nav li:nth-child(1) a { color: #008B8B; }
@@ -81,11 +80,6 @@ nav li:nth-child(3) a:hover {
 
 nav li.active a {
   border-bottom: 3px solid #008B8B;
-  color: #004d4d;
-}
-
-nav li a:hover {
-  border-bottom: 2px solid #008B8B;
   color: #004d4d;
 }
 
@@ -111,44 +105,34 @@ nav li a:hover {
   margin: 0 auto 20px;
 }
 
-/* IMAGENS */
-.livro-imagem {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-}
-
-.galeria-horizontal {
+/* GALERIA COMO LIVRO */
+.livro {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  max-width: 1000px;
   justify-content: center;
-  padding: 20px;
+  margin: 40px auto;
 }
 
-.livro-imagem {
-  width: 45vw;
-  max-width: 400px;
-  height: auto;
+.pagina {
+  width: 45%;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: white;
+  overflow: hidden;
   border: 1px solid #ccc;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.pagina:hover {
+  transform: scale(1.02);
+}
+
+.pagina img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.2s;
-}
-
-.livro-imagem:hover {
-  transform: scale(1.03);
-}
-
-/* Responsivo para celular */
-@media (max-width: 768px) {
-  .livro-imagem {
-    width: 90vw;
-  }
 }
 
 /* LEGENDA */
@@ -180,9 +164,8 @@ nav li a:hover {
     max-width: 50px;
   }
 
-  .livro-imagem {
+  .pagina {
     width: 90%;
-    height: auto;
   }
 }
 
@@ -199,11 +182,10 @@ nav li a:hover {
     display: none;
   }
 
-  .livro-imagem {
-    width: 300px;
-    height: auto;
-    border: none;
+  .pagina {
+    width: 100%;
     box-shadow: none;
+    border: none;
   }
 
   .legenda-imagem {
@@ -211,46 +193,4 @@ nav li a:hover {
     font-size: 12pt;
   }
 }
-body {
-  background: #f8f8f8;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-}
 
-.livro {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  max-width: 1000px;
-  justify-content: center;
-}
-
-.pagina {
-  width: 45%;
-  aspect-ratio: 3 / 4;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  background: white;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  transition: transform 0.3s;
-}
-
-.pagina:hover {
-  transform: scale(1.02);
-}
-
-.pagina img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .pagina {
-    width: 90%;
-  }
-}
