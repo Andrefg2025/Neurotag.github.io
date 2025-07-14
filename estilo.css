@@ -25,12 +25,12 @@ header.header {
 }
 
 .logo-left img {
-  max-width: 150px;
+  max-width: 100px;
   height: auto;
 }
 
 .logo-right img {
-  max-width: 120px;
+  max-width: 100px;
   height: auto;
 }
 
