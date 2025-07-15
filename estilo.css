@@ -19,7 +19,7 @@ header.header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 10px 40px;
+  padding: 05px 20px;
   background-color: #143c4d;
   border-bottom: 2px solid #ccc;
 }
